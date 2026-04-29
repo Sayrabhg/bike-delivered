@@ -1,0 +1,11 @@
+{
+  "name": "Bike Delivered",
+  "short_name": "BikeDelivered",
+  "description": "Fast food delivery right to your door",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0284c7",
+  "background_color": "#f9fafb",
+  "orientation": "portrait-primary",
+  "categories": ["food", "lifestyle"]
+}
