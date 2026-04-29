@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 // Feature pages (placeholder components)
 const HomePage = React.lazy(() => import('./features/discovery/HomePage'));
@@ -12,6 +13,17 @@ const RestaurantsPage = React.lazy(() => import('./features/discovery/Restaurant
 const CartPage = React.lazy(() => import('./features/ordering/CartPage'));
 const OrdersPage = React.lazy(() => import('./features/ordering/OrdersPage'));
 const TrackPage = React.lazy(() => import('./features/tracking/TrackPage'));
+const FAQPage = React.lazy(() => import('./features/discovery/FAQPage'));
+const HowItWorksPage = React.lazy(() => import('./features/discovery/HowItWorksPage'));
+const AboutPage = React.lazy(() => import('./features/discovery/AboutPage'));
+const BlogPage = React.lazy(() => import('./features/discovery/BlogPage'));
+const PressPage = React.lazy(() => import('./features/discovery/PressPage'));
+const CareersPage = React.lazy(() => import('./features/discovery/CareersPage'));
+const HelpPage = React.lazy(() => import('./features/discovery/HelpPage'));
+const SafetyPage = React.lazy(() => import('./features/discovery/SafetyPage'));
+const TermsPage = React.lazy(() => import('./features/discovery/TermsPage'));
+const PrivacyPage = React.lazy(() => import('./features/discovery/PrivacyPage'));
+const CookiesPage = React.lazy(() => import('./features/discovery/CookiesPage'));
 
 // Protected route component
 const ProtectedRoute = ({ children }) => {
@@ -53,6 +65,17 @@ const App = () => {
               {/* Public Routes */}
               <Route path="/" element={<HomePage />} />
               <Route path="/restaurants" element={<RestaurantsPage />} />
+              <Route path="/faq" element={<FAQPage />} />
+              <Route path="/how-it-works" element={<HowItWorksPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/press" element={<PressPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/help" element={<HelpPage />} />
+              <Route path="/safety" element={<SafetyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/cookies" element={<CookiesPage />} />
               
               {/* Auth Routes */}
               <Route 
@@ -111,6 +134,7 @@ const App = () => {
             </Routes>
           </React.Suspense>
         </main>
+        <Footer />
       </div>
     </Router>
   );
